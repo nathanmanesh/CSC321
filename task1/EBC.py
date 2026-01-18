@@ -62,6 +62,6 @@ def encrypt_ecb_bmp(in_bmp:str, out_bmp: str, header_size: int = BMP_HEADER_SIZE
         file.write(header + ciphertext_pixels) # header stays plaintext, pixels become ciphertext
 
 
-encrypt_ecb_bmp("mustang.bmp", "output.bmp", BMP_HEADER_SIZE)
+# encrypt_ecb_bmp("mustang.bmp", "output.bmp", BMP_HEADER_SIZE)
 
         
