@@ -1,6 +1,4 @@
-# CSC 321 Assignment 2
-# Winter 2026
-# Nathan Manesh and Thomas Baltz
+# Assignment 2 Task 1: EBC
 
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
