@@ -1,3 +1,3 @@
-CSC 321 Assignment 2
+CSC 321
 Winter 2026
 Nathan Manesh and Thomas Baltz
