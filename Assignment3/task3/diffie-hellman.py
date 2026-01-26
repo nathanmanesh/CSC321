@@ -63,7 +63,7 @@ def demo(q: int, a: int):
 
     
 
-    (xA, yA), (xB, yB), shared_secret = diffie_hellman_exchange(q_int, a_int)
+    (xA, yA), (xB, yB), shared_secret = diffie_hellman_exchange(q, a)
 
     key = aes_key_from_shared_secret(shared_secret)
 
