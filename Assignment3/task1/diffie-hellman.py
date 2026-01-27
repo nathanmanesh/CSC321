@@ -17,7 +17,7 @@ def int_to_bytes(n: int) -> bytes:
 # derive a 16 byte AES key from Diffie-Hellman shared secret
 def aes_key_from_shared_secret(s: int) -> bytes:
 
-    #  hash shared secreate and truncate to 16 bytes for AES128
+    #  hash shared secret and truncate to 16 bytes for AES128
     hash_bytes = SHA256.new(int_to_bytes(s)).digest()
 
     return hash_bytes[:16]
