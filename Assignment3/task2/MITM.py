@@ -69,6 +69,11 @@ def mallory_candidates_for_generator(a_used: int, q: int):
         return [1, q - 1]
     return []
 
+    # Cases:
+    # If a ≡ 1 (mod q) then every public key becomes 1, and shared secret becomes 1.
+    # If a ≡ 0 (mod q) (like using a = q) then public keys become 0, shared secret becomes 0.
+    # If a ≡ -1 (mod q) (like a = q-1) then public keys are either 1 or q-1 depending on whether the exponent is even or odd, so shared secret is either 1 or q-1.
+
 def demo_generator_tamper(q: int, a_real: int, a_tampered: int):
     # fixed iv
     iv = b"\x00" * 16 
