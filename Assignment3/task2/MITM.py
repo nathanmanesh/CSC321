@@ -4,7 +4,7 @@ from Crypto.Cipher import AES
 from Crypto.Hash import SHA256
 from Crypto.Random import get_random_bytes
 from Crypto.Util.Padding import pad, unpad
-from Crypto.Random.random import randint
+from Crypto.Util import number
 
 
 def int_to_bytes(n: int) -> bytes:
@@ -41,8 +41,8 @@ def diffie_hellman_generate(q: int, a: int):
 
 
     # alice (A) and bob (B) pick private secret
-    xA = randint(1, q - 2)
-    xB = randint(1, q -2)
+    xA = number.getPrime(256)
+    xB = number.getPrime(256)
 
 
     # alice and bob compute public key
