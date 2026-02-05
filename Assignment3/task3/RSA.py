@@ -78,7 +78,7 @@ def int_to_ascii(x: int) -> str:
     return b.decode("ascii")
 
 
-if __name__ == "__main__":
+def main():
     p, q = get_randoms()
     private, public = keygen(p, q)
 
@@ -96,3 +96,7 @@ if __name__ == "__main__":
 
     decrypted_message = int_to_ascii(plaintext)
     print (f"Decrypted Message: {decrypted_message}")
+
+
+if __name__ == "__main__":
+    main()
