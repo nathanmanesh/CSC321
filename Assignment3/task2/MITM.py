@@ -76,7 +76,7 @@ def mallory_candidates_for_generator(a_used: int, q: int):
 
 def demo_generator_tamper(q: int, a_real: int, a_tampered: int):
     # fixed iv
-    iv = b"\x00" * 16 
+    iv = get_random_bytes(16)
 
     # mallory tampers with the generator a in transit
     a_used = a_tampered

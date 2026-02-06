@@ -70,7 +70,7 @@ def demo(q: int, a: int):
 
     key = aes_key_from_shared_secret(shared_secret)
 
-    iv = b"\x00" * 16
+    iv = get_random_bytes(16)
 
 
     message_alice = b"Hi Bob, my name is Alice!"
